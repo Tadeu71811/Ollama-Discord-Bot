@@ -1,19 +1,17 @@
-# Ollama-Discord-Bot
-Turning your locally hosted Ollama model into a discord bot. 
 # Ollama Discord Bot
 
 ## Overview
-This bot integrates the Ollama Llama 3.2 model with Discord, enabling users to interact with the model via a chatbot. It includes Google Custom Search integration for enhanced responses and a prompt memory feature for maintaining context in conversations.
+This bot integrates the Ollama Llama 3.2 model with Discord, enabling users to interact with the model via a chatbot. It includes:
+- Google Custom Search integration for enhanced responses.
+- A prompt memory feature for maintaining context.
 
 ## Features
-1. **Chat Integration**: Interactive communication with the Llama 3.2 model.
-2. **Google Custom Search**: Provides additional search capabilities during conversations.
-3. **Prompt Memory**: Remembers up to five previous user inputs to maintain context.
-4. **Flask API**: Facilitates communication between Discord and the Llama 3.2 backend.
+1. **Chat Integration**: Communicate with the Llama 3.2 model.
+2. **Google Custom Search**: Perform searches during conversations.
+3. **Prompt Memory**: Retains up to five previous inputs for context.
+4. **Flask API**: Bridges communication between Discord and Llama 3.2.
 
----
-
-### Requirements
+## Requirements
 - Python 3.9+
 - Discord.py
 - Flask
@@ -21,7 +19,7 @@ This bot integrates the Ollama Llama 3.2 model with Discord, enabling users to i
 - Google Custom Search API credentials
 - Ollama Llama 3.2 model hosted via Ollama
 
-### Installation
+## Installation
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/ollama-discord-bot.git
@@ -33,22 +31,21 @@ This bot integrates the Ollama Llama 3.2 model with Discord, enabling users to i
    pip install -r requirements.txt
    ```
 
-3. Add environment variables:
+3. Configure environment variables:
    - `DISCORD_TOKEN`: Your Discord bot token.
-   - `GOOGLE_API_KEY`: Your Google Custom Search API key.
-   - `SEARCH_ENGINE_ID`: Your Google Custom Search engine ID.
+   - `GOOGLE_API_KEY`: Your Google API key.
+   - `SEARCH_ENGINE_ID`: Your Search Engine ID.
 
----
-
-### File Structure
+## File Structure
 ```
 ollama-discord-bot/
-├── flask_api.py      # Flask server for handling API requests
+├── flask_api.py      # Flask server for API requests
 ├── bot.py            # Discord bot logic
 ├── requirements.txt  # Dependencies
-└── README.md         # Project documentation
+└── README.md         # Documentation
+```
 
-### Usage
+## Usage
 1. Start the Flask server:
    ```bash
    python flask_api.py
@@ -57,11 +54,6 @@ ollama-discord-bot/
    ```bash
    python bot.py
    ```
-3. Interact with the bot in your Discord server.
-
----
-
-### Recommendations
-If the project grows further, consider splitting the `flask_api.py` and `bot.py` into modules to improve maintainability. For instance:
-- Keep API routes and logic modular.
-- Manage configurations (like API keys and tokens) using environment variables or a dedicated configuration file.
+3. Interact with the bot using commands:
+   - `!chat <message>`: Chat with the Llama 3.2 model.
+   - `!search <query>`: Perform a Google Custom Search.
