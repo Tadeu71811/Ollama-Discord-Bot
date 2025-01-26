@@ -47,3 +47,21 @@ ollama-discord-bot/
 ├── bot.py            # Discord bot logic
 ├── requirements.txt  # Dependencies
 └── README.md         # Project documentation
+
+### Usage
+1. Start the Flask server:
+   ```bash
+   python flask_api.py
+   ```
+2. Run the Discord bot:
+   ```bash
+   python bot.py
+   ```
+3. Interact with the bot in your Discord server.
+
+---
+
+### Recommendations
+If the project grows further, consider splitting the `flask_api.py` and `bot.py` into modules to improve maintainability. For instance:
+- Keep API routes and logic modular.
+- Manage configurations (like API keys and tokens) using environment variables or a dedicated configuration file.
